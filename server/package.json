@@ -1,0 +1,28 @@
+{
+  "name": "datamilk-challenge-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc -p tsconfig-build.json",
+    "start": "node dist/index.js",
+    "dev": "cross-env NODE_ENV=dev ts-node-dev --respawn --transpile-only --ignore-watch node_modules src/index.ts"
+  },
+  "keywords": [],
+  "author": "Uriel",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.12",
+    "@types/node": "^15.12.4",
+    "cross-env": "^7.0.3",
+    "ts-node": "^10.0.0",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.3.4"
+  }
+}
