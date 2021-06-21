@@ -1,6 +1,6 @@
 import { createLogger, format, transports } from "winston";
 
-const logger = createLogger({
+const instance = createLogger({
   level: "info",
   format: format.combine(
     format.timestamp({
@@ -18,8 +18,16 @@ const logger = createLogger({
   ],
 });
 
-export default {
-  info: (message: string) => logger.info(message),
-  warn: (message: string) => logger.warn(message),
-  error: (message: string) => logger.error(message),
+interface ILogger {
+  info: (message: string) => void;
+  warn: (message: string) => void;
+  error: (message: string) => void;
+}
+
+const logger: ILogger = {
+  info: (message: string) => instance.info(message),
+  warn: (message: string) => instance.warn(message),
+  error: (message: string) => instance.error(message),
 };
+
+export default logger;
