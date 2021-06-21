@@ -1,0 +1,7 @@
+public/
+node_modules/
+coverage/
+src/reportWebVitals.ts
+cypress/
+nyc_output/
+build/
