@@ -1,11 +1,7 @@
 import { Request, Response } from "express";
 
-import { IGetAppRepository } from "../repositories/get-app-factory";
-import {
-  getChartData,
-  getMarketSize,
-  getTopApps,
-} from "./get-stats-transforms";
+import { IGetAppRepository } from "../@types";
+import { getChartData, getMarketSize, getTopApps } from "../parsers";
 
 import { ok, serverError } from "../../../shared";
 

@@ -1,8 +1,4 @@
-import {
-  getChartData,
-  getMarketSize,
-  getTopApps,
-} from "./get-stats-transforms";
+import { getChartData, getMarketSize, getTopApps } from "./get-stats-parsers";
 
 const makeInput = (): any[] => [
   {
