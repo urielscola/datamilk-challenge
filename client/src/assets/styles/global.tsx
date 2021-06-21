@@ -26,7 +26,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   a {
-    color: ${theme.colors.gray3};
+    color: inherit;
     text-decoration: none;
   }
 

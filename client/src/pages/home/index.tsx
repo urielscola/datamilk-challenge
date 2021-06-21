@@ -1,9 +1,13 @@
 import React from 'react';
+import { Header, Container, InfoDisplay } from 'components';
 
 const Home: React.FC = () => {
   return (
     <>
-      <p>Home</p>
+      <Header />
+      <Container>
+        <InfoDisplay info="$10.6B" label="Market size" />
+      </Container>
     </>
   );
 };
