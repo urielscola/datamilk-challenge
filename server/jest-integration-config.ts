@@ -1,6 +1,5 @@
-import config from './jest.config'
+import config from "./jest.config";
 
-config.testMatch = ['**/*.test.ts']
-config.preset = "@shelf/jest-dynamodb"
+config.testMatch = ["**/*.test.ts"];
 
-export default config
+export default config;

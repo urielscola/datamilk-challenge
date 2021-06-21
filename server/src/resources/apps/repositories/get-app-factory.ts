@@ -1,11 +1,9 @@
 import { IBaseModel } from "../../../@types";
-import { IApp } from "../@types";
+import { IGetAppRepository } from "../@types";
 
 interface IAppFactory {
   App: IBaseModel;
 }
-
-type IGetAppRepository = () => [IApp];
 
 const getAppRepositoryFactory = ({ App }: IAppFactory): IGetAppRepository => {
   const getAppRepository: IGetAppRepository = () => App.list();

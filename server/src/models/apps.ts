@@ -1,6 +1,7 @@
 import { readFileSync } from "fs";
 import { join } from "path";
-import { IApp, IBaseModel } from "../@types";
+import { IBaseModel } from "../@types";
+import { IApp } from "../resources/apps/@types";
 
 interface IListResponse {
   data: [IApp];
