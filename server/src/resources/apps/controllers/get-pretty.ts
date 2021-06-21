@@ -1,12 +1,9 @@
 import { Request, Response } from "express";
 
 import { IGetAppRepository } from "../@types";
+import { IController } from "../../../@types";
 
 import { ok, serverError } from "../../../shared";
-
-interface IController {
-  handle: (request: Request, response: Response) => Promise<Response>;
-}
 
 class GetPretty implements IController {
   private readonly getAppRepository: IGetAppRepository;
