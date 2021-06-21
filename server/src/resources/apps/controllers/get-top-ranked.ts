@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 
 import { IGetAppRepository } from "../@types";
-import { getChartData, getMarketSize, getTopApps } from "../parsers";
+import { getTopRanked } from "../parsers";
 
 import { ok, serverError } from "../../../shared";
 
@@ -18,18 +18,16 @@ class GetStats implements IController {
 
   public handle = async (req: Request, res: Response): Promise<Response> => {
     try {
-      req.logger.info("[GET] get-stats START");
-
+      req.logger.info("[GET] get-top-ranked START");
       const apps = this.getAppRepository();
-      const marketSize = getMarketSize(apps);
-      const topApps = getTopApps(apps);
-      const chartData = getChartData(apps);
-      const { status, body } = ok({ marketSize, topApps, chartData });
+      const topRanked = getTopRanked(apps);
 
-      req.logger.info("[GET] get-stats SUCCESS");
+      const { status, body } = ok({ topRanked });
+
+      req.logger.info("[GET] get-top-ranked SUCCESS");
       return res.status(status).json(body);
     } catch ({ message }) {
-      req.logger.error(`[GET] get-stats ERROR: ${message as string}`);
+      req.logger.error(`[GET] get-top-ranked ERROR: ${message as string}`);
       const { status, body } = serverError({ message });
       return res.status(status).json(body);
     }

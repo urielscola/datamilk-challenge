@@ -17,12 +17,15 @@ class GetPretty implements IController {
 
   public handle = async (req: Request, res: Response): Promise<Response> => {
     try {
+      req.logger.info("[GET] get-pretty START");
       const apps = this.getAppRepository();
       const { status, body } = ok(JSON.stringify(apps, null, 2));
 
+      req.logger.info("[GET] get-pretty SUCCESS");
       return res.status(status).send(body);
-    } catch (err) {
-      const { status, body } = serverError({ message: err.message });
+    } catch ({ message }) {
+      req.logger.error(`[GET] get-pretty ERROR: ${message as string}`);
+      const { status, body } = serverError({ message: message });
       return res.status(status).json(body);
     }
   };
