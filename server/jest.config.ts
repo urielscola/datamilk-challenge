@@ -1,21 +1,23 @@
 const config: any = {
-  roots: ['<rootDir>/src'],
+  roots: ["<rootDir>/src"],
   clearMocks: true,
   coveragePathIgnorePatterns: [
     "<rootDir>/node_modules/",
     "<rootDir>/src/index.ts",
-    "<rootDir>/src/server.ts"
+    "<rootDir>/src/server.ts",
+    "<rootDir>/src/config/index.ts",
+    "/@types/",
   ],
-  coverageProvider: 'v8',
-  collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
-  coverageDirectory: 'coverage',
+  coverageProvider: "v8",
+  collectCoverageFrom: ["<rootDir>/src/**/*.ts"],
+  coverageDirectory: "coverage",
 
-  testEnvironment: 'node',
+  testEnvironment: "node",
   transform: {
-    '.+\\.ts$': 'ts-jest'
+    ".+\\.ts$": "ts-jest",
   },
   moduleNameMapper: {
-    "@/(.*)": '<rootDir>/src/$1'
+    "@/(.*)": "<rootDir>/src/$1",
   },
   coverageThreshold: {
     global: {
@@ -25,6 +27,6 @@ const config: any = {
       statements: 100,
     },
   },
-}
+};
 
-export default config
+export default config;
