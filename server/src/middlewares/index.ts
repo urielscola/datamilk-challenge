@@ -1,7 +1,7 @@
 import { Express, json } from "express";
 import helmet from "helmet";
 import cors from "cors";
-import mwLogger from "./mwLogger";
+import mwLogger from "./mw-logger";
 
 export default (app: Express): void => {
   app.use(json());

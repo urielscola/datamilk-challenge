@@ -1,6 +1,6 @@
-import mwLogger from "./mwLogger";
+import mwLogger from "./mw-logger";
 
-describe("mwLogger", () => {
+describe("Logger middleware", () => {
   test("it should add a logger instance to the req object", () => {
     const req: any = {};
     const nextFn = jest.fn();

@@ -7,6 +7,8 @@ const config: any = {
     "<rootDir>/src/server.ts",
     "<rootDir>/src/middlewares/index.ts",
     "/@types/",
+    "/models/",
+    "index.ts",
   ],
   coverageProvider: "v8",
   collectCoverageFrom: ["<rootDir>/src/**/*.ts"],
