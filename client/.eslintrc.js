@@ -27,5 +27,8 @@ module.exports = {
     createDefaultProgram: true,
     project: './**/tsconfig.json',
   },
-  rules: {},
+  rules: {
+    'import/prefer-default-export': 0,
+    '@typescript-eslint/no-explicit-any': 0,
+  },
 };
