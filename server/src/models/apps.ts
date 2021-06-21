@@ -9,7 +9,10 @@ interface IListResponse {
 
 const App: IBaseModel = {
   list: () => {
-    const input = readFileSync(join(__dirname, "input.json"), "utf8");
+    const input = readFileSync(
+      join(__dirname, process.env.INPUT_FILE as string),
+      "utf8"
+    );
     const { data }: IListResponse = JSON.parse(input);
     return data;
   },
