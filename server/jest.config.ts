@@ -5,7 +5,7 @@ const config: any = {
     "<rootDir>/node_modules/",
     "<rootDir>/src/index.ts",
     "<rootDir>/src/server.ts",
-    "<rootDir>/src/config/index.ts",
+    "<rootDir>/src/middlewares/index.ts",
     "/@types/",
   ],
   coverageProvider: "v8",
