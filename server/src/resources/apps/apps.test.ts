@@ -12,6 +12,16 @@ describe("GET /apps/stats", () => {
   });
 });
 
+describe("GET /apps/top_ranked", () => {
+  test("Returns correct status and body", async () => {
+    const response = await request(server).get("/apps/top_ranked");
+
+    expect(response.status).toBe(200);
+    expect(response.body.topRanked.length).toBe(3);
+    expect(response.body.topRanked[0].timesInTop10).toBe(8);
+  });
+});
+
 describe("GET /apps/formatted_json", () => {
   test("Returns correct status and body", async () => {
     const response = await request(server).get("/apps/formatted_json");

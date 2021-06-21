@@ -1,4 +1,4 @@
-interface RankHistory {
+export interface RankHistory {
   [key: string]: number;
 }
 
@@ -13,4 +13,8 @@ export interface IApp {
   rating: number;
   url: string;
   rank_history: [RankHistory];
+}
+
+export interface IAppWithCount extends IApp {
+  timesInTop10: number;
 }
