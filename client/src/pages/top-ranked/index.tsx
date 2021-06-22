@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState, memo } from 'react';
+import { useAlert } from 'react-alert';
 import {
   Header,
   Head,
@@ -9,20 +10,35 @@ import {
   FlexDiv,
 } from 'components';
 import { getTopRanked, IGetTopRankedResponse } from 'services';
+import { useLoadingContext } from 'contexts/loading-context';
 
 const TopRanked: React.FC = () => {
-  const [topRanked, setTopRanked] = useState({} as IGetTopRankedResponse);
+  const [topRanked, setTopRanked] = useState({
+    topRanked: [],
+  } as IGetTopRankedResponse);
+  const { loading, setLoading } = useLoadingContext();
+  const alert = useAlert();
 
   const fetchData = useCallback(async () => {
-    const response = await getTopRanked();
-    setTopRanked(response);
-  }, [setTopRanked]);
+    try {
+      setLoading(true);
+      const response = await getTopRanked();
+      setTopRanked(response);
+    } catch (err) {
+      alert.show(
+        'Houve um problema ao buscar os dados. Tente novamente em alguns momentos.',
+        { type: 'error' }
+      );
+    } finally {
+      setLoading(false);
+    }
+  }, [setLoading, setTopRanked, alert]);
 
   useEffect(() => {
     fetchData();
   }, [fetchData]);
 
-  if (!topRanked.topRanked) return <div />;
+  if (loading) return <div />;
 
   return (
     <>

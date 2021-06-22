@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState, memo } from 'react';
+import { useAlert } from 'react-alert';
 import {
   Header,
   Head,
@@ -12,20 +13,37 @@ import {
 } from 'components';
 import { getStats, IGetStatsResponse } from 'services';
 import { formatMarketSize } from 'utils';
+import { useLoadingContext } from 'contexts/loading-context';
 
 const Home: React.FC = () => {
-  const [stats, setStats] = useState({} as IGetStatsResponse);
+  const [stats, setStats] = useState({
+    marketSize: 0,
+    topApps: [],
+    chartData: [],
+  } as IGetStatsResponse);
+  const { loading, setLoading } = useLoadingContext();
+  const alert = useAlert();
 
   const fetchData = useCallback(async () => {
-    const response = await getStats();
-    setStats(response);
-  }, [setStats]);
+    try {
+      setLoading(true);
+      const response = await getStats();
+      setStats(response);
+    } catch (err) {
+      alert.show(
+        'Houve um problema ao buscar os dados. Tente novamente em alguns momentos.',
+        { type: 'error' }
+      );
+    } finally {
+      setLoading(false);
+    }
+  }, [setStats, setLoading, alert]);
 
   useEffect(() => {
     fetchData();
   }, [fetchData]);
 
-  if (!stats.topApps) return <div />;
+  if (loading) return <div />;
 
   return (
     <>
