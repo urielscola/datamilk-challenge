@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components/macro';
 import { space, layout } from 'styled-system';
+import { theme } from 'assets/styles';
 
 const spinAnimation = keyframes`
   0% {
@@ -34,9 +35,9 @@ export const Container = styled('div')`
     width: 58px;
     height: 58px;
     border-radius: 50%;
-    border: 1px solid ${({ theme }) => theme.colors.green};
-    border-color: ${({ theme }) => theme.colors.green} transparent
-      ${({ theme }) => theme.colors.green} transparent;
+    border: 1px solid ${theme.colors.green};
+    border-color: ${theme.colors.green} transparent ${theme.colors.green}
+      transparent;
     animation: ${spinAnimation} 1.2s linear infinite;
   }
 
