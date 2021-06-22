@@ -1,81 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header component should render 1`] = `
+exports[`Loader component should render 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <header
-        class="styles__Container-sc-1iatm7z-0 bOlgot"
+      <div
+        class="styles__Overlay-sc-1es2inw-0 jQRQSj"
       >
         <div
-          class="styles__Container-xc6wae-0 kAesqU"
-        >
-          <div
-            class="styles__Container-sc-1rvgi7a-0 hNmzOi"
-            data-testid="flex-div"
-            display="flex"
-          >
-            <h1
-              class="sc-bdnxRM knTszl"
-              data-testid="text"
-            >
-              <a
-                href="/"
-              >
-                Home
-              </a>
-            </h1>
-            <h2
-              class="sc-bdnxRM knTszl"
-              data-testid="text"
-            >
-              <a
-                href="/top-ranked"
-              >
-                Top Ranked
-              </a>
-            </h2>
-          </div>
-        </div>
-      </header>
+          class="styles__Container-sc-1es2inw-1 bEPaFh"
+        />
+      </div>
     </div>
   </body>,
   "container": <div>
-    <header
-      class="styles__Container-sc-1iatm7z-0 bOlgot"
+    <div
+      class="styles__Overlay-sc-1es2inw-0 jQRQSj"
     >
       <div
-        class="styles__Container-xc6wae-0 kAesqU"
-      >
-        <div
-          class="styles__Container-sc-1rvgi7a-0 hNmzOi"
-          data-testid="flex-div"
-          display="flex"
-        >
-          <h1
-            class="sc-bdnxRM knTszl"
-            data-testid="text"
-          >
-            <a
-              href="/"
-            >
-              Home
-            </a>
-          </h1>
-          <h2
-            class="sc-bdnxRM knTszl"
-            data-testid="text"
-          >
-            <a
-              href="/top-ranked"
-            >
-              Top Ranked
-            </a>
-          </h2>
-        </div>
-      </div>
-    </header>
+        class="styles__Container-sc-1es2inw-1 bEPaFh"
+      />
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

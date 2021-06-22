@@ -1,46 +1,71 @@
-# Getting Started with Create React App
+# This a technical challenge for Datamilk
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Architecture and most important libraries used
 
-## Available Scripts
+- React
+- React Router Dom
+- Typescript
+- Jest
+- React Testing Library
+- Axios
+- Chart.js
+- Styled Components
+- Styled-System
 
-In the project directory, you can run:
+### <strong>Source code treee:</strong>
 
-### `yarn start`
+```
+  src
+  |-- assets
+  |-- components
+  |-- constants
+  |-- contexts
+  |-- pages
+  |-- routes
+  |-- services
+  |-- utils
+  |-- App.tsx
+  |-- index.tsx
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br/>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Development environment installation
 
-### `yarn test`
+Close this repository and run `yarn` or `npm install` to install the project dependencies.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br/>
 
-### `yarn build`
+## Scripts
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<details>
+  <summary>
+    <strong style="font-size: 15px;">To run the tests</strong>
+  </summary>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  <br/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<b>To run all unit tests</b>
 
-### `yarn eject`
+> `yarn test`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+</details>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<details>
+  <summary>
+    <strong style="font-size: 15px;">To start the client</strong>
+  </summary>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  <br/>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<b>Start in development environment</b>
 
-## Learn More
+  <p>*** Please run the API before starting the front-end for better experience ***</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> `yarn start`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<b>To create a production build</b>
+
+> `yarn build`
+
+</details>
