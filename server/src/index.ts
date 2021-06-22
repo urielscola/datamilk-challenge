@@ -1,3 +1,6 @@
+/* eslint-disable import/first */
+if (process.env.NODE_ENV === "prod") require("module-alias/register");
+
 import server from "./server";
 
 const PORT = process.env.PORT ?? 3333;
