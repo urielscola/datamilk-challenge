@@ -5,6 +5,9 @@ import { theme } from 'assets/styles';
 const size = {
   prop: 'size',
   variants: {
+    'x-small': {
+      fontSize: theme.typography.sizeXSmall,
+    },
     small: {
       fontSize: theme.typography.sizeSmall,
     },

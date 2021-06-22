@@ -4,7 +4,7 @@ import * as Styles from './styles';
 
 interface CustomProps extends React.HTMLAttributes<HTMLParagraphElement> {
   as?: 'p' | 'span' | 'b' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'label';
-  size?: 'small' | 'normal' | 'medium';
+  size?: 'x-small' | 'small' | 'normal' | 'medium';
   appearence?: 'light' | 'dark1' | 'dark2' | 'dark3';
   [key: string]: any;
 }

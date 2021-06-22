@@ -1,15 +1,18 @@
 import React from 'react';
+import { SpaceProps, LayoutProps } from 'styled-system';
 import { Text } from 'components';
 import * as Styles from './styles';
 
-interface Props {
+interface CustomProps {
   info: string;
   label: string;
 }
 
-const InfoDisplay: React.FC<Props> = ({ info, label }) => {
+type Props = CustomProps & SpaceProps & LayoutProps;
+
+const InfoDisplay: React.FC<Props> = ({ info, label, ...props }) => {
   return (
-    <Styles.Container data-testid="info-display">
+    <Styles.Container data-testid="info-display" {...props}>
       <Text
         appearence="light"
         fontSize={{ default: '40px', md: '46px', lg: '64px' }}

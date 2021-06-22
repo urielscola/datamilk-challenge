@@ -34,6 +34,7 @@ Object.keys(colors).forEach((key) => {
 });
 
 const typography: Map = {
+  sizeXSmall: '11px',
   sizeSmall: '14px',
   sizeNormal: '16px',
   sizeMedium: '18px',
