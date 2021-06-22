@@ -13,7 +13,7 @@ interface ContextProps {
 }
 
 const LoadingContext = createContext({} as ContextProps);
-const useLoadingContext = () => useContext(LoadingContext);
+const useLoadingContext = (): ContextProps => useContext(LoadingContext);
 
 const LoadingProvider: React.FC = ({ children }) => {
   const [loading, setLoading] = useState(true);
