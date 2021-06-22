@@ -56,13 +56,7 @@ Close this repository and run `yarn` or `npm install` to install the project dep
 
 > `yarn dev`
 
-<b>Buildar código</b>
-
-> `npm run build`
-
 </details>
-
-> `yarn start`
 
 <b>To create a production build</b>
 
