@@ -1,23 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FlexDiv component should render 1`] = `
+exports[`Footer component should render 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="styles__Container-sc-1rvgi7a-0 FKVzm"
-        data-testid="flex-div"
-        display="flex"
-      />
+      <footer
+        class="styles__Container-ykj9fp-0 bKgpFm"
+      >
+        <div
+          class="styles__Container-xc6wae-0 kAesqU"
+        >
+          <p
+            class="sc-bdnxRM knTszl"
+            data-testid="text"
+          >
+            © 2021 Creator Name. Nunc velit egestas diam sapien faucibus parturient.
+          </p>
+        </div>
+      </footer>
     </div>
   </body>,
   "container": <div>
-    <div
-      class="styles__Container-sc-1rvgi7a-0 FKVzm"
-      data-testid="flex-div"
-      display="flex"
-    />
+    <footer
+      class="styles__Container-ykj9fp-0 bKgpFm"
+    >
+      <div
+        class="styles__Container-xc6wae-0 kAesqU"
+      >
+        <p
+          class="sc-bdnxRM knTszl"
+          data-testid="text"
+        >
+          © 2021 Creator Name. Nunc velit egestas diam sapien faucibus parturient.
+        </p>
+      </div>
+    </footer>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

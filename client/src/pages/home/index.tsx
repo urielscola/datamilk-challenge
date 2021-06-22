@@ -1,11 +1,14 @@
 import React, { useCallback, useEffect, useState, memo } from 'react';
 import {
   Header,
+  Head,
+  Footer,
   Container,
   InfoDisplay,
   Widget,
   AppList,
   FlexDiv,
+  ScatterChart,
 } from 'components';
 import { getStats, IGetStatsResponse } from 'services';
 import { formatMarketSize } from 'utils';
@@ -26,11 +29,13 @@ const Home: React.FC = () => {
 
   return (
     <>
+      <Head title="Stats" />
       <Header />
       <Container>
         <FlexDiv
           flexDirection={{ default: 'column', md: 'row' }}
           justifyContent={{ md: 'space-between' }}
+          marginBottom={{ default: '15px' }}
         >
           <InfoDisplay
             info={formatMarketSize(stats.marketSize)}
@@ -41,7 +46,11 @@ const Home: React.FC = () => {
             <AppList apps={stats.topApps} label="Downloads" data="downloads" />
           </Widget>
         </FlexDiv>
+        <Widget title="Downloads & Revenue">
+          <ScatterChart apps={stats.chartData} />
+        </Widget>
       </Container>
+      <Footer />
     </>
   );
 };

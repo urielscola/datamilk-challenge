@@ -1,23 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FlexDiv component should render 1`] = `
+exports[`InfoDisplay component should render 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="styles__Container-sc-1rvgi7a-0 FKVzm"
-        data-testid="flex-div"
-        display="flex"
-      />
+        class="styles__Container-tjv5f4-0 hxGFyr"
+        data-testid="info-display"
+      >
+        <p
+          class="sc-bdnxRM gDVQWw"
+          data-testid="text"
+          font-size="[object Object]"
+          font-weight="[object Object]"
+        >
+          $10.6B
+        </p>
+        <p
+          class="sc-bdnxRM jaRXZl"
+          data-testid="text"
+          font-weight="[object Object]"
+        >
+          Market size
+        </p>
+      </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="styles__Container-sc-1rvgi7a-0 FKVzm"
-      data-testid="flex-div"
-      display="flex"
-    />
+      class="styles__Container-tjv5f4-0 hxGFyr"
+      data-testid="info-display"
+    >
+      <p
+        class="sc-bdnxRM gDVQWw"
+        data-testid="text"
+        font-size="[object Object]"
+        font-weight="[object Object]"
+      >
+        $10.6B
+      </p>
+      <p
+        class="sc-bdnxRM jaRXZl"
+        data-testid="text"
+        font-weight="[object Object]"
+      >
+        Market size
+      </p>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

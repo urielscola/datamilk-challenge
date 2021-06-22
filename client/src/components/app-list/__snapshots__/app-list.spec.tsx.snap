@@ -1,23 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FlexDiv component should render 1`] = `
+exports[`AppList component should render 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="styles__Container-sc-1rvgi7a-0 FKVzm"
-        data-testid="flex-div"
-        display="flex"
-      />
+        class="styles__Container-sc-1pah7wz-0 ecSmOp"
+        data-testid="widget"
+      >
+        <div
+          class="styles__Container-sc-1rvgi7a-0 jvSBtk"
+          data-testid="flex-div"
+          display="flex"
+        >
+          <p
+            class="sc-bdnxRM jhULRO"
+            data-testid="text"
+          >
+            App name
+          </p>
+          <p
+            class="sc-bdnxRM jhULRO"
+            data-testid="text"
+          >
+            Downloads
+          </p>
+        </div>
+      </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="styles__Container-sc-1rvgi7a-0 FKVzm"
-      data-testid="flex-div"
-      display="flex"
-    />
+      class="styles__Container-sc-1pah7wz-0 ecSmOp"
+      data-testid="widget"
+    >
+      <div
+        class="styles__Container-sc-1rvgi7a-0 jvSBtk"
+        data-testid="flex-div"
+        display="flex"
+      >
+        <p
+          class="sc-bdnxRM jhULRO"
+          data-testid="text"
+        >
+          App name
+        </p>
+        <p
+          class="sc-bdnxRM jhULRO"
+          data-testid="text"
+        >
+          Downloads
+        </p>
+      </div>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

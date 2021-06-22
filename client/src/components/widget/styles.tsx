@@ -1,9 +1,10 @@
 import styled from 'styled-components/macro';
 import { space, layout } from 'styled-system';
+import { theme } from 'assets/styles';
 
 export const Container = styled('div')`
-  background-color: ${({ theme }) => theme.colors.white};
-  border-radius: ${({ theme }) => theme.layout.borderRadius};
+  background-color: ${theme.colors.white};
+  border-radius: ${theme.layout.borderRadius};
   padding: 0 15px;
   width: 100%;
 

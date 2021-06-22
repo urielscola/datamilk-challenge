@@ -1,23 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FlexDiv component should render 1`] = `
+exports[`Header component should render 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="styles__Container-sc-1rvgi7a-0 FKVzm"
-        data-testid="flex-div"
-        display="flex"
-      />
+      <header
+        class="styles__Container-sc-1iatm7z-0 bOlgot"
+      >
+        <div
+          class="styles__Container-xc6wae-0 kAesqU"
+        >
+          <h1
+            class="sc-bdnxRM knTszl"
+            data-testid="text"
+          >
+            <a
+              href="/"
+            >
+              Home
+            </a>
+          </h1>
+        </div>
+      </header>
     </div>
   </body>,
   "container": <div>
-    <div
-      class="styles__Container-sc-1rvgi7a-0 FKVzm"
-      data-testid="flex-div"
-      display="flex"
-    />
+    <header
+      class="styles__Container-sc-1iatm7z-0 bOlgot"
+    >
+      <div
+        class="styles__Container-xc6wae-0 kAesqU"
+      >
+        <h1
+          class="sc-bdnxRM knTszl"
+          data-testid="text"
+        >
+          <a
+            href="/"
+          >
+            Home
+          </a>
+        </h1>
+      </div>
+    </header>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
