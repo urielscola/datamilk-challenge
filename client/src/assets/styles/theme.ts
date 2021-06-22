@@ -17,7 +17,7 @@ const colors: Map = {
   black: '#202020',
   white: '#fff',
   offWhite: '#E5E5E5',
-  gray: '#BDBDBD',
+  gray1: '#BDBDBD',
   gray2: '#828282',
   gray3: '#4F4F4F',
   green: '#90C95C',
@@ -34,6 +34,7 @@ Object.keys(colors).forEach((key) => {
 });
 
 const typography: Map = {
+  sizeXSmall: '11px',
   sizeSmall: '14px',
   sizeNormal: '16px',
   sizeMedium: '18px',
