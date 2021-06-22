@@ -16,3 +16,17 @@ export const getStats = async (): Promise<IGetStatsResponse> => {
 
   return response;
 };
+
+export interface IGetTopRankedResponse {
+  topRanked: IAppWithCount[];
+}
+export const getTopRanked = async (): Promise<IGetTopRankedResponse> => {
+  const response: IGetTopRankedResponse = await http.get(
+    `${url}/apps/top_ranked`,
+    {
+      headers: defaultHeaders,
+    }
+  );
+
+  return response;
+};
